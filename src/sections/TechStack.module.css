@@ -1,0 +1,116 @@
+.tech {
+  background: linear-gradient(180deg, rgba(5, 5, 5, 0.86) 0%, rgba(16, 17, 20, 0.92) 100%);
+}
+
+.glow {
+  position: absolute;
+  bottom: 0;
+  right: -200px;
+  width: 620px;
+  height: 620px;
+  background: radial-gradient(circle, rgba(10, 132, 255, 0.1), transparent 65%);
+  filter: blur(30px);
+  pointer-events: none;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+}
+
+.cellWrap {
+  height: 100%;
+}
+
+.cell {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 26px 16px;
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border);
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.cell:hover {
+  transform: translateY(-6px);
+  border-color: var(--primary-border);
+  background: var(--primary-soft);
+  box-shadow: var(--shadow-glow);
+}
+
+.cell:hover .iconWrap {
+  transform: scale(1.12) rotate(-6deg);
+  color: var(--primary);
+  filter: drop-shadow(0 0 16px var(--primary-glow));
+}
+
+.iconWrap {
+  color: var(--text);
+  transition: transform 0.3s ease, color 0.3s ease, filter 0.3s ease;
+}
+
+.name {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-h);
+  white-space: nowrap;
+}
+
+.levelWrap {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: center;
+}
+
+.levelBg {
+  width: 100%;
+  height: 4px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.07);
+  overflow: hidden;
+}
+
+.levelFill {
+  display: block;
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--primary), #38bdf8);
+  box-shadow: 0 0 12px var(--primary-glow);
+  transition: width 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.levelNum {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--primary);
+  min-height: 13px;
+}
+
+@media (max-width: 1000px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 720px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .cell {
+    padding: 20px 12px;
+  }
+}

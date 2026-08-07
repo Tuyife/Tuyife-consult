@@ -1,0 +1,55 @@
+.wrap {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: grid;
+  place-items: center;
+  background: var(--bg);
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+.logo {
+  display: inline-flex;
+}
+
+.logoImg {
+  width: 88px;
+  height: 88px;
+  border-radius: 22px;
+  object-fit: cover;
+  box-shadow: 0 0 40px -8px var(--primary-glow);
+}
+
+.name {
+  font-family: var(--mono);
+  font-size: 13px;
+  letter-spacing: 0.4em;
+  color: var(--text-2);
+}
+
+.bar {
+  width: 220px;
+  height: 3px;
+  border-radius: 999px;
+  background: var(--surface-2);
+  overflow: hidden;
+}
+
+.barFill {
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--primary), #38bdf8);
+  box-shadow: 0 0 16px var(--primary-glow);
+}
+
+.pct {
+  font-family: var(--mono);
+  font-size: 14px;
+  color: var(--text-2);
+}

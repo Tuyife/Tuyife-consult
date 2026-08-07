@@ -1,0 +1,658 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Okuhire Israel Tuyife — CV / Résumé</title>
+    <link rel="icon" type="image/png" href="/logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --primary: #0a84ff;
+        --primary-dark: #0668c8;
+        --text: #1b2330;
+        --muted: #5b6675;
+        --line: #e3e8ee;
+        --bg: #050505;
+        --card: #ffffff;
+        --accent-bg: #f2f7ff;
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+        font-size: 13.5px;
+        line-height: 1.55;
+        color: var(--text);
+        background: var(--bg);
+        background-image:
+          radial-gradient(900px 500px at 50% -10%, rgba(10, 132, 255, 0.18), transparent 60%),
+          linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+        background-size: auto, 44px 44px, 44px 44px;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      .toolbar {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        padding: 14px clamp(16px, 4vw, 48px);
+        background: rgba(5, 5, 5, 0.82);
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        color: #f5f7fa;
+      }
+
+      .toolbar-brand {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 18px;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+      }
+
+      .toolbar-brand img {
+        width: 28px;
+        height: 28px;
+        border-radius: 8px;
+      }
+
+      .toolbar-brand span {
+        color: var(--primary);
+        text-shadow: 0 0 18px rgba(10, 132, 255, 0.6);
+      }
+
+      .toolbar-actions {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 10px 20px;
+        border-radius: 999px;
+        font-size: 13.5px;
+        font-weight: 600;
+        text-decoration: none;
+        cursor: pointer;
+        border: 1px solid transparent;
+        transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+      }
+
+      .btn-primary {
+        background: var(--primary);
+        color: #fff;
+        box-shadow: 0 0 22px -6px rgba(10, 132, 255, 0.7);
+      }
+
+      .btn-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 0 34px -4px rgba(10, 132, 255, 0.8);
+      }
+
+      .btn-ghost {
+        background: rgba(255, 255, 255, 0.06);
+        color: #f5f7fa;
+        border-color: rgba(255, 255, 255, 0.16);
+      }
+
+      .btn-ghost:hover {
+        transform: translateY(-2px);
+        border-color: rgba(10, 132, 255, 0.5);
+        background: rgba(10, 132, 255, 0.14);
+      }
+
+      .page {
+        max-width: 794px;
+        margin: 32px auto 80px;
+        padding: 0 16px;
+      }
+
+      .cv {
+        background: var(--card);
+        border-radius: 18px;
+        box-shadow: 0 30px 80px -30px rgba(0, 0, 0, 0.9);
+        overflow: hidden;
+      }
+
+      .cv-header {
+        padding: 40px 48px 28px;
+        border-bottom: 1px solid var(--line);
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 24px;
+        flex-wrap: wrap;
+        background: linear-gradient(180deg, #f7fbff 0%, #ffffff 100%);
+      }
+
+      .cv-name {
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 32px;
+        font-weight: 700;
+        letter-spacing: -0.03em;
+        margin: 0 0 4px;
+        color: #0d1220;
+      }
+
+      .cv-role {
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--primary-dark);
+        margin: 0 0 14px;
+      }
+
+      .cv-contact {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px 18px;
+        font-size: 12.5px;
+        color: var(--muted);
+      }
+
+      .cv-contact a {
+        color: inherit;
+        text-decoration: none;
+        border-bottom: 1px solid rgba(10, 132, 255, 0.35);
+        transition: color 0.2s ease, border-color 0.2s ease;
+      }
+
+      .cv-contact a:hover {
+        color: var(--primary);
+        border-color: var(--primary);
+      }
+
+      .cv-avatar {
+        width: 92px;
+        height: 92px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #0a84ff, #38bdf8);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 30px;
+        font-weight: 700;
+        color: #fff;
+        flex-shrink: 0;
+        box-shadow: 0 0 0 4px #fff, 0 10px 30px -8px rgba(10, 132, 255, 0.5);
+      }
+
+      .cv-body {
+        padding: 28px 48px 40px;
+        display: grid;
+        grid-template-columns: 1.55fr 1fr;
+        gap: 32px;
+      }
+
+      .section {
+        margin-bottom: 26px;
+      }
+
+      .section-title {
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--primary-dark);
+        margin: 0 0 12px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .section-title::after {
+        content: '';
+        flex: 1;
+        height: 1px;
+        background: var(--line);
+      }
+
+      .summary {
+        font-size: 13.5px;
+        color: var(--text);
+        margin: 0;
+      }
+
+      .job {
+        margin-bottom: 18px;
+      }
+
+      .job:last-child {
+        margin-bottom: 0;
+      }
+
+      .job-head {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+
+      .job-title {
+        font-weight: 700;
+        font-size: 14.5px;
+        color: #0d1220;
+        margin: 0;
+      }
+
+      .job-company {
+        font-size: 13px;
+        color: var(--primary-dark);
+        font-weight: 500;
+      }
+
+      .job-date {
+        font-size: 12px;
+        color: var(--muted);
+        white-space: nowrap;
+      }
+
+      .job-desc {
+        margin: 6px 0 0;
+        font-size: 13px;
+        color: var(--text);
+      }
+
+      .job-desc ul {
+        margin: 6px 0 0;
+        padding-left: 18px;
+      }
+
+      .job-desc li {
+        margin-bottom: 3px;
+      }
+
+      .skills-group {
+        margin-bottom: 14px;
+      }
+
+      .skills-group:last-child {
+        margin-bottom: 0;
+      }
+
+      .skills-name {
+        font-size: 12px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        color: var(--muted);
+        margin: 0 0 6px;
+      }
+
+      .skills-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+      }
+
+      .tag {
+        font-size: 11.5px;
+        font-weight: 500;
+        color: var(--primary-dark);
+        background: var(--accent-bg);
+        border: 1px solid rgba(10, 132, 255, 0.18);
+        padding: 4px 10px;
+        border-radius: 999px;
+      }
+
+      .project {
+        margin-bottom: 12px;
+      }
+
+      .project-head {
+        font-size: 13.5px;
+        font-weight: 700;
+        color: #0d1220;
+        display: flex;
+        align-items: baseline;
+        gap: 8px;
+        flex-wrap: wrap;
+      }
+
+      .project-cat {
+        font-size: 11px;
+        font-weight: 500;
+        color: var(--primary-dark);
+        background: var(--accent-bg);
+        padding: 2px 8px;
+        border-radius: 999px;
+      }
+
+      .project-desc {
+        font-size: 12.5px;
+        color: var(--text);
+        margin: 3px 0 0;
+      }
+
+      .project-desc a {
+        color: var(--primary-dark);
+        font-size: 11px;
+        margin-left: 4px;
+        word-break: break-all;
+        text-decoration: underline;
+        text-underline-offset: 2px;
+      }
+
+      .edu-item {
+        margin-bottom: 12px;
+      }
+
+      .edu-item:last-child {
+        margin-bottom: 0;
+      }
+
+      .edu-title {
+        font-size: 13.5px;
+        font-weight: 700;
+        color: #0d1220;
+        margin: 0;
+      }
+
+      .edu-school {
+        font-size: 12.5px;
+        color: var(--muted);
+        margin: 2px 0 0;
+      }
+
+      .cv-foot {
+        border-top: 1px solid var(--line);
+        padding: 14px 48px;
+        font-size: 11.5px;
+        color: var(--muted);
+        text-align: center;
+        background: #fafbfc;
+      }
+
+      .cv-foot strong {
+        color: var(--primary-dark);
+      }
+
+      @media (max-width: 640px) {
+        .cv-header,
+        .cv-body {
+          padding-left: 24px;
+          padding-right: 24px;
+        }
+        .cv-foot {
+          padding-left: 24px;
+          padding-right: 24px;
+        }
+        .cv-body {
+          grid-template-columns: 1fr;
+        }
+        .cv-header {
+          flex-direction: column;
+        }
+        .cv-avatar {
+          width: 72px;
+          height: 72px;
+          font-size: 24px;
+        }
+      }
+
+      @media print {
+        body {
+          background: #fff;
+          background-image: none;
+          font-size: 12px;
+        }
+        .toolbar {
+          display: none;
+        }
+        .page {
+          margin: 0;
+          padding: 0;
+        }
+        .cv {
+          border-radius: 0;
+          box-shadow: none;
+        }
+        .cv-header {
+          padding: 24px 40px 20px;
+        }
+        .cv-body {
+          padding: 20px 40px 24px;
+        }
+        .cv-foot {
+          padding: 10px 40px;
+        }
+        .section,
+        .job,
+        .project,
+        .edu-item {
+          break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="toolbar">
+      <div class="toolbar-brand">
+        <img src="/logo.png" alt="" />
+        Tuyife<span>.</span> Consult
+      </div>
+      <div class="toolbar-actions">
+        <a class="btn btn-ghost" href="cv.html" target="_blank" rel="noreferrer">View</a>
+        <button class="btn btn-primary" onclick="window.print()">Download / Save as PDF</button>
+      </div>
+    </header>
+
+    <main class="page">
+      <article class="cv" id="cv">
+        <header class="cv-header">
+          <div>
+            <h1 class="cv-name">Okuhire Israel Tuyife</h1>
+            <p class="cv-role">Frontend Web Developer | Website Designer | Founder, Tuyife Consult</p>
+            <div class="cv-contact">
+              <span>Ibadan, Oyo State, Nigeria</span>
+              <span><a href="tel:+2348065878877">0806 587 8877</a></span>
+              <a href="mailto:omotuyifeisrael@gmail.com">omotuyifeisrael@gmail.com</a>
+              <a href="https://www.linkedin.com/in/omotuyife-israel-75891540b">linkedin.com/in/omotuyife-israel</a>
+              <a href="https://github.com/Tuyife">github.com/Tuyife</a>
+            </div>
+          </div>
+          <div class="cv-avatar">IT</div>
+        </header>
+
+        <div class="cv-body">
+          <div class="cv-main">
+            <section class="section">
+              <h2 class="section-title">Professional Summary</h2>
+              <p class="summary">
+                Motivated and ambitious Software Engineering student with a strong foundation in
+                front-end web development and responsive website design. Skilled in developing modern,
+                user-friendly websites using HTML, CSS, JavaScript, and React.js through academic and
+                personal projects. Passionate about helping businesses establish a professional online
+                presence through clean, functional, and responsive web solutions. A fast learner with
+                excellent problem-solving, communication, and teamwork skills, committed to continuous
+                learning and delivering high-quality results.
+              </p>
+            </section>
+
+            <section class="section">
+              <h2 class="section-title">Project Experience</h2>
+
+              <div class="job">
+                <p class="job-title">Responsive Business Websites</p>
+                <p class="job-desc">
+                  Designed and developed responsive business websites with clean layouts and
+                  mobile-friendly interfaces, focusing on usability and performance.
+                </p>
+              </div>
+
+              <div class="job">
+                <p class="job-title">Personal Portfolio Websites</p>
+                <p class="job-desc">
+                  Built portfolio websites to showcase technical skills, personal projects, and
+                  professional growth.
+                </p>
+              </div>
+
+              <div class="job">
+                <p class="job-title">Academic Web Development Projects</p>
+                <p class="job-desc">
+                  Completed several web development projects as part of software engineering coursework,
+                  applying responsive design principles and front-end development techniques.
+                </p>
+              </div>
+            </section>
+
+            <section class="section">
+              <h2 class="section-title">Featured Projects</h2>
+
+              <div class="project">
+                <div class="project-head">
+                  Carrio Motors <span class="project-cat">Automobile Dealership</span>
+                </div>
+                <p class="project-desc">
+                  Luxury automobile dealership platform for Ibeju-Lekki, Lagos featuring premium
+                  brands — BMW, Audi, Hyundai, Kia, Jeep, Suzuki, MG.
+                  React · Vite · JavaScript
+                  <a href="https://carrio-motors-opal.vercel.app/">carrio-motors-opal.vercel.app</a>
+                </p>
+              </div>
+
+              <div class="project">
+                <div class="project-head">
+                  JobBoard Pro <span class="project-cat">Job Portal</span>
+                </div>
+                <p class="project-desc">
+                  Modern job portal connecting recruiters and job seekers with secure login and an
+                  intuitive dashboard.
+                  React · Vite · JavaScript
+                  <a href="https://job-portal-zfmb.vercel.app/">job-portal-zfmb.vercel.app</a>
+                </p>
+              </div>
+
+              <div class="project">
+                <div class="project-head">
+                  LoanAptech <span class="project-cat">Loan Application Platform</span>
+                </div>
+                <p class="project-desc">
+                  Clean, professional loan application platform for APTECH with a streamlined
+                  request flow.
+                  React · Vite · JavaScript
+                  <a href="https://loan-aptech-pearl.vercel.app/">loan-aptech-pearl.vercel.app</a>
+                </p>
+              </div>
+            </section>
+
+            <section class="section">
+              <h2 class="section-title">Personal Project</h2>
+              <div class="job">
+                <div class="job-head">
+                  <p class="job-title">
+                    Tuyife Consult <span class="job-company">· Founder</span>
+                  </p>
+                </div>
+                <p class="job-desc">
+                  Established Tuyife Consult, a personal brand focused on designing and developing
+                  professional websites for individuals, startups, and businesses. The brand is
+                  dedicated to delivering modern, responsive, and visually appealing web solutions.
+                </p>
+              </div>
+            </section>
+
+            <section class="section">
+              <h2 class="section-title">Career Objective</h2>
+              <p class="summary">
+                To secure opportunities where I can apply and expand my web development skills,
+                contribute to innovative projects, and grow into a highly skilled software engineer
+                while delivering quality digital solutions that create value for clients and
+                organizations.
+              </p>
+            </section>
+          </div>
+
+          <aside class="cv-side">
+            <section class="section">
+              <h2 class="section-title">Technical Skills</h2>
+              <div class="skills-group">
+                <p class="skills-name">Programming &amp; Web Technologies</p>
+                <div class="skills-tags">
+                  <span class="tag">HTML5</span>
+                  <span class="tag">CSS3</span>
+                  <span class="tag">JavaScript</span>
+                  <span class="tag">React.js</span>
+                </div>
+              </div>
+              <div class="skills-group">
+                <p class="skills-name">Web Development</p>
+                <div class="skills-tags">
+                  <span class="tag">Responsive Website Design</span>
+                  <span class="tag">Mobile-First Design</span>
+                  <span class="tag">Cross-Browser Compatibility</span>
+                  <span class="tag">Website Maintenance</span>
+                </div>
+              </div>
+              <div class="skills-group">
+                <p class="skills-name">Professional Skills</p>
+                <div class="skills-tags">
+                  <span class="tag">Problem Solving</span>
+                  <span class="tag">Critical Thinking</span>
+                  <span class="tag">Communication</span>
+                  <span class="tag">Team Collaboration</span>
+                  <span class="tag">Microsoft Office Suite</span>
+                </div>
+              </div>
+            </section>
+
+            <section class="section">
+              <h2 class="section-title">Education</h2>
+              <div class="edu-item">
+                <p class="edu-title">Software Engineering (In View)</p>
+                <p class="edu-school">APTECH Computer Education · 2026 – Present</p>
+              </div>
+              <div class="edu-item">
+                <p class="edu-title">Senior Secondary School Certificate Examination (SSCE)</p>
+                <p class="edu-school">Headstart Pillars International College · 2025</p>
+              </div>
+            </section>
+
+            <section class="section">
+              <h2 class="section-title">Languages</h2>
+              <div class="skills-tags">
+                <span class="tag">English</span>
+                <span class="tag">Yoruba</span>
+              </div>
+            </section>
+          </aside>
+        </div>
+
+        <footer class="cv-foot">
+          References available on request · Designed &amp; Developed by
+          <strong>Okuhire Israel Tuyife · Tuyife Consult</strong> · © 2026
+        </footer>
+      </article>
+    </main>
+  </body>
+</html>

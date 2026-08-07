@@ -1,0 +1,115 @@
+.testimonials {
+  background: linear-gradient(180deg, rgba(5, 5, 5, 0.86) 0%, rgba(16, 17, 20, 0.92) 100%);
+}
+
+.glow {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 700px;
+  height: 400px;
+  background: radial-gradient(closest-side, rgba(10, 132, 255, 0.09), transparent);
+  pointer-events: none;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.cardWrap {
+  height: 100%;
+}
+
+.card {
+  position: relative;
+  margin: 0;
+  height: 100%;
+  padding: 32px 28px;
+  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  border-color: var(--primary-border);
+  box-shadow: var(--shadow-glow);
+}
+
+.quoteMark {
+  position: absolute;
+  top: 6px;
+  right: 22px;
+  font-family: var(--heading);
+  font-size: 90px;
+  line-height: 1;
+  color: rgba(10, 132, 255, 0.14);
+  user-select: none;
+}
+
+.stars {
+  display: flex;
+  gap: 3px;
+}
+
+.quote {
+  flex: 1;
+  font-size: 15px;
+  line-height: 1.75;
+  color: var(--text);
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding-top: 18px;
+  border-top: 1px solid var(--border);
+}
+
+.avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  color: #fff;
+  font-family: var(--heading);
+  font-weight: 700;
+  font-size: 15px;
+  box-shadow: 0 0 20px -4px rgba(10, 132, 255, 0.4);
+  flex-shrink: 0;
+}
+
+.authorMeta {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.authorName {
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--text-h);
+}
+
+.authorRole {
+  font-size: 12.5px;
+  color: var(--text-2);
+}
+
+@media (max-width: 1000px) {
+  .grid {
+    grid-template-columns: 1fr;
+    max-width: 640px;
+    margin-inline: auto;
+  }
+}

@@ -1,0 +1,326 @@
+.contact {
+  background: rgba(5, 5, 5, 0.86);
+}
+
+.glowA {
+  position: absolute;
+  top: 10%;
+  left: -200px;
+  width: 560px;
+  height: 560px;
+  background: radial-gradient(circle, rgba(10, 132, 255, 0.1), transparent 65%);
+  filter: blur(30px);
+  pointer-events: none;
+}
+
+.glowB {
+  position: absolute;
+  bottom: -120px;
+  right: -160px;
+  width: 560px;
+  height: 560px;
+  background: radial-gradient(circle, rgba(56, 189, 248, 0.08), transparent 65%);
+  filter: blur(30px);
+  pointer-events: none;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 28px;
+  position: relative;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+.infoTitle {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.infoDesc {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--text-2);
+  max-width: 440px;
+}
+
+.socialList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.socialRow {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 13px 16px;
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border);
+  transition: all 0.3s ease;
+}
+
+.socialRow:hover {
+  border-color: var(--primary-border);
+  background: var(--primary-soft);
+  transform: translateX(6px);
+  box-shadow: 0 0 24px -8px var(--primary-glow);
+}
+
+.socialIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 11px;
+  background: var(--primary-soft);
+  border: 1px solid var(--primary-border);
+  color: var(--primary);
+  flex-shrink: 0;
+}
+
+.socialLabel {
+  flex: 1;
+  font-size: 14.5px;
+  font-weight: 500;
+  color: var(--text-h);
+}
+
+.socialArrow {
+  color: var(--text-2);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.socialRow:hover .socialArrow {
+  color: var(--primary);
+  transform: translateX(4px);
+}
+
+.infoCard {
+  padding: 20px 22px;
+  border-radius: var(--radius-md);
+  background: linear-gradient(120deg, rgba(10, 132, 255, 0.1), rgba(56, 189, 248, 0.05));
+  border: 1px solid var(--primary-border);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.infoCardLabel {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--primary);
+}
+
+.infoCardValue {
+  font-family: var(--heading);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-h);
+}
+
+.infoCardMeta {
+  font-size: 12.5px;
+  color: var(--text-2);
+}
+
+.downloadCv {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 18px;
+  border-radius: var(--radius-md);
+  background: linear-gradient(120deg, rgba(10, 132, 255, 0.12), rgba(56, 189, 248, 0.05));
+  border: 1px solid var(--primary-border);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.downloadCv:hover {
+  transform: translateY(-3px);
+  border-color: var(--primary);
+  box-shadow: var(--shadow-glow);
+}
+
+.downloadIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 13px;
+  background: var(--primary);
+  color: #fff;
+  flex-shrink: 0;
+  box-shadow: 0 0 24px -6px var(--primary-glow);
+}
+
+.downloadText {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+}
+
+.downloadLabel {
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--text-h);
+}
+
+.downloadMeta {
+  font-size: 12.5px;
+  color: var(--text-2);
+}
+
+.downloadArrow {
+  color: var(--primary);
+  font-size: 18px;
+  transition: transform 0.3s ease;
+}
+
+.downloadCv:hover .downloadArrow {
+  transform: translateX(4px);
+}
+
+.mapWrap {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--surface);
+}
+
+.mapHeader {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 18px;
+  font-size: 13.5px;
+  font-weight: 500;
+  color: var(--text-h);
+  background: var(--surface-2);
+  border-bottom: 1px solid var(--border);
+}
+
+.mapPin {
+  font-size: 16px;
+}
+
+.mapWrap iframe {
+  display: block;
+}
+
+.formWrap {
+  height: 100%;
+}
+
+.form {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 36px;
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-lg);
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-h);
+}
+
+.req {
+  color: var(--primary);
+}
+
+.input {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border);
+  color: var(--text-h);
+  font-family: var(--sans);
+  font-size: 14.5px;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(10, 132, 255, 0.18);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.input:hover:not(:focus) {
+  border-color: var(--border-strong);
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.input option {
+  background: var(--surface);
+  color: var(--text-h);
+}
+
+.submit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 16px;
+  border-radius: var(--radius-sm);
+  background: var(--primary);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  border: 1px solid var(--primary);
+  box-shadow: 0 0 28px -8px var(--primary-glow);
+  transition: box-shadow 0.25s ease, background 0.25s ease;
+}
+
+.submit:hover {
+  background: #2e96ff;
+  box-shadow: 0 0 40px -6px var(--primary-glow);
+}
+
+@media (max-width: 1000px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .form {
+    padding: 28px 24px;
+  }
+}
+
+@media (max-width: 560px) {
+  .row {
+    grid-template-columns: 1fr;
+  }
+}
