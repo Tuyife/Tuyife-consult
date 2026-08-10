@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { FiSend, FiDownload } from 'react-icons/fi';
+import { FiSend, FiDownload, FiArrowRight, FiMapPin } from 'react-icons/fi';
 import { CONTACT_SERVICES, SOCIALS } from '../data/content';
 import SectionHeading from '../components/SectionHeading';
 import Reveal from '../components/Reveal';
@@ -64,7 +64,7 @@ export default function Contact() {
                     <Icon name={s.icon} size={19} />
                   </span>
                   <span className={styles.socialLabel}>{s.label}</span>
-                  <span className={styles.socialArrow}>→</span>
+                  <span className={styles.socialArrow}><FiArrowRight size={17} /></span>
                 </a>
               ))}
             </div>
@@ -83,12 +83,12 @@ export default function Contact() {
                 <span className={styles.downloadLabel}>Download Résumé</span>
                 <span className={styles.downloadMeta}>View my CV · Save as PDF</span>
               </span>
-              <span className={styles.downloadArrow}>→</span>
+              <span className={styles.downloadArrow}><FiArrowRight size={17} /></span>
             </a>
 
             <div className={styles.mapWrap}>
               <div className={styles.mapHeader}>
-                <span className={styles.mapPin}>📍</span>
+                <span className={styles.mapPin}><FiMapPin size={17} /></span>
                 <span>Based Worldwide · Working Remotely</span>
               </div>
               <iframe
@@ -96,7 +96,7 @@ export default function Contact() {
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126940.19472302896!2d3.3218736500000004!3d6.5243793!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b9228fa2fb399%3A0xbe7c7ff5b1f4f1b7!2sLagos%2C%20Nigeria!5e0!3m2!1sen!2sng!4v1700000000000!5m2!1sen!2sng"
                 width="100%"
                 height="240"
-                style={{ border: 0, filter: 'grayscale(1) invert(0.92) contrast(0.9) hue-rotate(180deg) saturate(0.7) brightness(0.9)', borderRadius: '0 0 14px 14px' }}
+                style={{ border: 0, borderRadius: '0 0 14px 14px' }}
                 loading="lazy"
                 allowFullScreen
                 referrerPolicy="no-referrer-when-downgrade"

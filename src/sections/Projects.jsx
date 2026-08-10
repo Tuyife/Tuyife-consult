@@ -1,4 +1,4 @@
-import { FiExternalLink } from 'react-icons/fi';
+import { FiExternalLink, FiTool } from 'react-icons/fi';
 import { FaGithub } from 'react-icons/fa6';
 import { PROJECTS } from '../data/content';
 import SectionHeading from '../components/SectionHeading';
@@ -72,7 +72,7 @@ function EmptyState() {
   return (
     <Reveal type="slideUp" className={styles.emptyWrap}>
       <div className={styles.empty}>
-        <span className={styles.emptyIcon}>🛠️</span>
+        <span className={styles.emptyIcon}><FiTool size={44} /></span>
         <h3 className={styles.emptyTitle}>Projects coming soon</h3>
         <p className={styles.emptyDesc}>
           We're currently building exciting new products. Check back shortly to see our latest

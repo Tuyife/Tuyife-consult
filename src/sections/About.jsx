@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { useInView } from 'framer-motion';
-import { FiCheck } from 'react-icons/fi';
+import { FiCheck, FiGrid, FiTrendingUp } from 'react-icons/fi';
 import { ABOUT_STATS, SPECIALTIES } from '../data/content';
 import SectionHeading from '../components/SectionHeading';
 import Reveal from '../components/Reveal';
@@ -52,7 +52,7 @@ export default function About() {
         <div className={styles.grid}>
           <Reveal type="slideUp" className={styles.panel}>
             <div className={styles.panelHeader}>
-              <span className={styles.panelIcon}>✦</span>
+              <span className={styles.panelIcon}><FiGrid size={18} /></span>
               <span className={styles.panelTitle}>What we specialize in</span>
             </div>
             <ul className={styles.specialties}>
@@ -75,7 +75,7 @@ export default function About() {
 
           <Reveal type="slideUp" delay={0.15} className={styles.panel}>
             <div className={styles.panelHeader}>
-              <span className={styles.panelIcon}>📈</span>
+              <span className={styles.panelIcon}><FiTrendingUp size={18} /></span>
               <span className={styles.panelTitle}>Impact by the numbers</span>
             </div>
             <div className={styles.stats}>

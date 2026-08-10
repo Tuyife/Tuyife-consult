@@ -11,8 +11,8 @@ function Stars({ count }) {
         <HiOutlineStar
           key={i}
           size={17}
-          style={{ color: i < count ? '#0a84ff' : 'rgba(255,255,255,0.18)' }}
-          fill={i < count ? '#0a84ff' : 'none'}
+          style={{ color: i < count ? 'var(--primary)' : 'var(--border-strong)' }}
+          fill={i < count ? 'var(--primary)' : 'none'}
         />
       ))}
     </div>

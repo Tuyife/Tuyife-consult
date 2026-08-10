@@ -1,5 +1,5 @@
 .testimonials {
-  background: linear-gradient(180deg, rgba(5, 5, 5, 0.86) 0%, rgba(16, 17, 20, 0.92) 100%);
+  background: linear-gradient(180deg, var(--section-tint-a) 0%, var(--section-tint-b) 100%);
 }
 
 .glow {
@@ -29,7 +29,7 @@
   height: 100%;
   padding: 32px 28px;
   border-radius: var(--radius-lg);
-  background: rgba(255, 255, 255, 0.03);
+  background: var(--glass);
   border: 1px solid var(--border);
   display: flex;
   flex-direction: column;

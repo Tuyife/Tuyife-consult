@@ -1,5 +1,5 @@
 .services {
-  background: linear-gradient(180deg, rgba(5, 5, 5, 0.86) 0%, rgba(16, 17, 20, 0.92) 100%);
+  background: linear-gradient(180deg, var(--section-tint-a) 0%, var(--section-tint-b) 100%);
 }
 
 .glow {
@@ -28,7 +28,7 @@
   height: 100%;
   padding: 30px 28px;
   border-radius: var(--radius-lg);
-  background: rgba(255, 255, 255, 0.03);
+  background: var(--glass);
   border: 1px solid var(--border);
   transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease, background 0.35s ease;
   overflow: hidden;
@@ -48,7 +48,7 @@
   transform: translateY(-8px);
   border-color: var(--primary-border);
   box-shadow: var(--shadow-glow);
-  background: rgba(10, 132, 255, 0.04);
+  background: var(--primary-soft);
 }
 
 .card:hover::before {
@@ -92,7 +92,7 @@
   right: 24px;
   font-family: var(--mono);
   font-size: 12px;
-  color: rgba(255, 255, 255, 0.16);
+  color: var(--glass-text);
   transition: color 0.3s ease;
 }
 

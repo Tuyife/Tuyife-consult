@@ -1,7 +1,7 @@
 .footer {
   position: relative;
   padding-block: 72px 36px;
-  background: rgba(16, 17, 20, 0.92);
+  background: var(--footer-bg);
   border-top: 1px solid var(--border);
   overflow: hidden;
 }
@@ -68,13 +68,13 @@
   height: 38px;
   border-radius: 12px;
   border: 1px solid var(--border);
-  background: rgba(255, 255, 255, 0.03);
+  background: var(--glass);
   color: var(--text);
   transition: all 0.25s ease;
 }
 
 .social:hover {
-  color: #fff;
+  color: var(--primary);
   border-color: var(--primary-border);
   background: var(--primary-soft);
   box-shadow: 0 0 20px -4px var(--primary-glow);

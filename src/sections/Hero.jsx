@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState } from 'react';
 import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
-import { FiArrowRight } from 'react-icons/fi';
+import { FiArrowRight, FiCheck, FiZap } from 'react-icons/fi';
+import { FaRocket } from 'react-icons/fa6';
+import { TbAtom } from 'react-icons/tb';
 import MagneticButton from '../components/MagneticButton';
 import styles from './Hero.module.css';
 
@@ -304,9 +306,9 @@ export default function Hero() {
                 <span className={styles.fwTitle}>deploy.sh</span>
               </div>
               <div className={styles.terminal}>
-                <p><span className={styles.ok}>✔</span> build completed in 4.2s</p>
-                <p><span className={styles.ok}>✔</span> bundle size 42kb gzip</p>
-                <p><span className={styles.ok}>✔</span> lighthouse 98 / 100</p>
+                <p><span className={styles.ok}><FiCheck size={12} /></span> build completed in 4.2s</p>
+                <p><span className={styles.ok}><FiCheck size={12} /></span> bundle size 42kb gzip</p>
+                <p><span className={styles.ok}><FiCheck size={12} /></span> lighthouse 98 / 100</p>
                 <p className={styles.deploying}><span className={styles.spinner}>◌</span> deploying to production…</p>
               </div>
             </motion.div>
@@ -316,7 +318,7 @@ export default function Hero() {
               animate={{ y: [0, -10, 0], rotate: [0, 2, 0] }}
               transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
             >
-              <span className={styles.chipKey}>⚛️</span> React + Vite · 60fps
+              <span className={styles.chipKey}><TbAtom size={15} /></span> React + Vite · 60fps
             </motion.div>
 
             <motion.div
@@ -324,7 +326,7 @@ export default function Hero() {
               animate={{ y: [0, 12, 0], rotate: [0, -2, 0] }}
               transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
             >
-              <span className={styles.chipKey}>🚀</span> Deployed &amp; Live
+              <span className={styles.chipKey}><FaRocket size={14} /></span> Deployed &amp; Live
             </motion.div>
 
             <motion.div
@@ -332,7 +334,7 @@ export default function Hero() {
               animate={{ y: [0, -8, 0], rotate: [0, 3, 0] }}
               transition={{ duration: 4.5, repeat: Infinity, ease: 'easeInOut' }}
             >
-              <span className={styles.chipKey}>⚡</span> Lighthouse 98
+              <span className={styles.chipKey}><FiZap size={15} /></span> Lighthouse 98
             </motion.div>
           </motion.div>
         </motion.div>

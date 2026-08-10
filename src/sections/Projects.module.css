@@ -1,5 +1,5 @@
 .projects {
-  background: rgba(5, 5, 5, 0.86);
+  background: var(--section-tint);
 }
 
 .glow {
@@ -39,6 +39,8 @@
 }
 
 .emptyIcon {
+  display: inline-flex;
+  color: var(--primary);
   font-size: 44px;
   filter: drop-shadow(0 8px 20px rgba(10, 132, 255, 0.35));
   animation: emojiFloat 4s ease-in-out infinite;
@@ -291,7 +293,7 @@
   color: var(--text);
   padding: 4px 10px;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.04);
+  background: var(--glass);
   border: 1px solid var(--border);
 }
 
@@ -325,7 +327,7 @@
 }
 
 .codeBtn {
-  background: rgba(255, 255, 255, 0.04);
+  background: var(--glass);
   color: var(--text-h);
   border: 1px solid var(--border-strong);
 }
@@ -334,7 +336,7 @@
   transform: translateY(-2px);
   border-color: var(--primary-border);
   background: var(--primary-soft);
-  color: #fff;
+  color: var(--text-h);
 }
 
 @media (max-width: 1000px) {

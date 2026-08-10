@@ -8,6 +8,7 @@ import {
   HiOutlineAdjustments,
   HiOutlineMail,
 } from 'react-icons/hi';
+import { FiMoon, FiSun } from 'react-icons/fi';
 import { NAV_LINKS } from '../data/content';
 import styles from './Navbar.module.css';
 
@@ -20,7 +21,7 @@ const TAB_ICONS = {
   '#contact': HiOutlineMail,
 };
 
-export default function Navbar() {
+export default function Navbar({ theme = 'dark', onToggleTheme }) {
   const [scrolled, setScrolled] = useState(false);
   const [active, setActive] = useState('#home');
 
@@ -77,6 +78,15 @@ export default function Navbar() {
               </a>
             ))}
           </nav>
+
+          <button
+            className={styles.themeToggle}
+            onClick={onToggleTheme}
+            aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+            title={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+          >
+            {theme === 'dark' ? <FiSun size={18} /> : <FiMoon size={18} />}
+          </button>
 
           <div className={styles.navActions}>
             <a href="cv.html" target="_blank" rel="noreferrer" className={styles.cvLink}>

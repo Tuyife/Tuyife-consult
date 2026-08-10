@@ -38,7 +38,7 @@
 }
 
 .section-title .gradient {
-  background: linear-gradient(120deg, #ffffff 0%, var(--primary) 100%);
+  background: var(--heading-gradient);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -53,7 +53,7 @@
 }
 
 .glass {
-  background: rgba(255, 255, 255, 0.04);
+  background: var(--glass);
   border: 1px solid var(--border);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
@@ -90,7 +90,7 @@
   gap: 10px;
   padding: 14px 28px;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.04);
+  background: var(--glass);
   color: var(--text-h);
   font-weight: 600;
   font-size: 15px;
@@ -101,7 +101,7 @@
 
 .ghost-btn:hover {
   transform: translateY(-2px);
-  background: rgba(255, 255, 255, 0.08);
+  background: var(--glass-strong);
   border-color: var(--primary-border);
 }
 
