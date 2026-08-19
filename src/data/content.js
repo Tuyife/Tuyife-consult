@@ -131,6 +131,17 @@ export const PROJECTS = [
     gradient: 'linear-gradient(135deg, #34d399 0%, #22d3ee 100%)',
     metric: 'Loan Platform',
   },
+  {
+    name: 'Chef Tinaaa',
+    category: 'Catering & Food Service',
+    stack: ['React', 'Vite', 'Node.js', 'Express', 'MongoDB'],
+    desc: 'A full-stack catering platform with online booking, food delivery ordering, 50+ meal menu, admin dashboard, and Moniepoint payment integration.',
+    live: 'https://chef-tinaaa.vercel.app/',
+    github: 'https://github.com/Tuyife/Chef-Tinaaa',
+    image: '',
+    gradient: 'linear-gradient(135deg, #f97316 0%, #ef4444 100%)',
+    metric: 'Full Stack',
+  },
 ];
 
 export const TECH_STACK = [
