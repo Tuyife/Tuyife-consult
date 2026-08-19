@@ -1,6 +1,7 @@
 import carrioImg from '../assets/projects/carrio.jpg';
 import jobboardImg from '../assets/projects/jobboard.jpg';
 import loanaptechImg from '../assets/projects/loanaptech.jpg';
+import chefTinaaaImg from '../assets/projects/chef-tinaaa.jpg';
 
 export const NAV_LINKS = [
   { label: 'Home', href: '#home' },
@@ -138,7 +139,7 @@ export const PROJECTS = [
     desc: 'A full-stack catering platform with online booking, food delivery ordering, 50+ meal menu, admin dashboard, and Moniepoint payment integration.',
     live: 'https://chef-tinaaa.vercel.app/',
     github: 'https://github.com/Tuyife/Chef-Tinaaa',
-    image: '',
+    image: chefTinaaaImg,
     gradient: 'linear-gradient(135deg, #f97316 0%, #ef4444 100%)',
     metric: 'Full Stack',
   },
